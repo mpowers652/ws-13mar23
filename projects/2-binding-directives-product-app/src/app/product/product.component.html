@@ -1,0 +1,81 @@
+<h1 class="text-center">
+    PRODUCT COMPONENT TEMPLATE
+</h1>
+<br><br>
+<div class = "bg-success text-white p-4">
+    Product Object Data = {{productJsonToString}}
+</div>
+<form novalidate (ngSubmit)="submitForm(productForm)" #productForm = "ngForm">
+    <div class="form-group">
+        <label for="">Product Name</label>
+        <input required minlength = "5" name = "prodname" type="text" 
+        class="form-control" [(ngModel)] ="product.prodname" #prodname = "ngModel">
+        <ul class="text-danger list-unstyled"
+            *ngIf="prodname.dirty && prodname.invalid">
+            <li *ngIf="prodname.errors!['required']">
+                Product name cannot be left empty
+            </li>
+            <li *ngIf="prodname.errors!['minlength']">
+                Product name must contain {{prodname.errors!['minlength'].requiredLength}} characters
+            </li>
+        </ul>
+    </div>
+    <div class="form-group">
+        <label for="">Category</label>
+        <input required name = "category" type="text" class="form-control" [(ngModel)] ="product.category" #prodname = "ngModel">
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input required 
+        name = "price" 
+        type="text" 
+        class="form-control" 
+        [(ngModel)] ="product.price">
+    </div>
+    <button class="btn btn-primary" 
+    (click)="addProduct(product)">
+        Add Product
+    </button>
+</form>
+<h2 [ngClass]="getTitleClass()" *ngIf="dataSource.getProducts().length > 0">
+    There are {{dataSource.getProducts().length}} products to explore
+</h2>
+<h2 class="bg-danger p-2 text-white text-center" *ngIf="dataSource.getProducts().length == 0">
+    There are no products at the moment
+</h2>
+<!-- <div *ngFor="let p of dataSource.getProducts()">
+    Product is called {{p.prodname}}
+</div> -->
+<div class="bg-primary text-white p-2">
+    Selected product: {{selectedProduct || '(none)'}}
+</div>
+<table class="table table-sm table-bordered mt-1 text-dark p-2">
+    <tr>
+        <th>Sl.no</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+    </tr>
+
+    <tr *ngFor="let p of dataSource.getProducts();
+        let i = index;" [class.bg-warning]="isSame(p)">
+        <td (mouseover)="selectedProduct = p.prodname">{{i+1}}</td>
+        <td>{{p.prodname}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.price}}</td>
+    </tr>
+</table>
+<!-- 
+<div class = "form-group">
+    <label for="">Product Name</label>
+    <input type="text"class = "form-control" 
+    input [value]="selectedProduct" 
+    (input)!="selectedProduct = $event.target.value">
+</div> -->
+<br><br>
+<!-- <h1>
+    Ng Model Demonstration here
+</h1>
+
+<input type="text" [(ngModel)] = "prodName">
+<p>{{this.prodName}}</p> -->

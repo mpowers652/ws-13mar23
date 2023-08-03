@@ -1,0 +1,17 @@
+<button (click)="toggleReport()">
+    Toggle report table
+</button>
+<br><br>
+<app-ceo-report *ngIf="willDisplayReport"></app-ceo-report>
+<br><br>
+<button (click)="toggleCrud()">
+    Toggle CRUD table
+</button>
+<br><br>
+<app-ceo-crud *ngIf="willDisplayCrud"></app-ceo-crud>
+<br><br>
+<button (click)="togglePayments()">
+    Toggle Payment table
+</button>
+<br><br>
+<app-ceo-payment *ngIf="willDisplayPayments"></app-ceo-payment>

@@ -1,0 +1,19 @@
+<button (click)="toggleCrud()"
+class="btn btn-info btn-outline-success ">
+    Update Agents or Customers
+</button>
+<br><br>
+<app-branch-crud *ngIf="isCrud"></app-branch-crud>
+<br><br>
+<button (click)="paymentOptions()">
+    Make Payment for Customer
+</button>
+<br><br>
+<app-branch-payment *ngIf="isPayment"></app-branch-payment>
+<br><br>
+<button (click)="reportToggle()"
+class="btn btn-info btn-outline-success m-3">
+    Toggle Report Display
+</button>
+<br><br>
+<app-branchReport *ngIf="reportToggle()" [branchMan]= branchMan></app-branchReport>

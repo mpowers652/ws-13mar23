@@ -1,0 +1,26 @@
+<h1 class="text-white bg-success text-center">
+ACCOUNTS LIST
+</h1>
+
+<table class="table table-striped">
+    <thead>
+       
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of allAccounts">
+            <td>{{account!.actNumber}}</td>
+            <td>{{account.customer!.firstname}}</td>
+            <td>{{account.customer!.lastname}}</td>
+            <td>{{account.customer!.city}}</td>
+            <td>{{account.customer!.phone}}</td>
+            <td>{{account!.actType}}</td>
+            <td>{{account!.actBalance}}</td>
+            <td>
+                <button class="btn btn-small btn-info" (click)="findAccount(account.actNumber)">Edit</button>
+            </td>
+            <td>
+                <button class="btn btn-small btn-danger" (click)="deleteAccount(account.actNumber)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+
+
+
+<div>
+    <table class='table table-striped table-bordered'>
+        <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>Upcoming Due date</th>
+                <th>Premium cost</th>
+                <th>Remaining Payment</th>
+                <th>Prior Payments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td>{{customer!.getId()}}</td>
+                <td>{{customer!.getDueDate()!}}</td>
+                <td>{{customer!.getPremiumCost()}}</td>
+                <td>{{customer!.getRemainingPayment()}}</td>
+                <td *ngFor="let p of getPaymentList let i = index">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date of Prior payment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{p}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,30 @@
+<h1 class="text-white bg-info text-center">HERE IS YOUR CREDIT CARD OFFER</h1>
+<div class="container justify-content-center">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Annual Fee</td>
+                        <td>{{creditCardAnnualFee}}</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate</td>
+                        <td>{{creditCardInterestRate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Free Cash Limit</td>
+                        <td>{{creditCardInterestFreeCash}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-sm btn-primary" (click)="applyForCreditCard()">
+                                APPLY
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

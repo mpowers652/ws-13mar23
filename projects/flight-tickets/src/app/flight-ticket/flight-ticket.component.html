@@ -1,0 +1,62 @@
+<h1 class="bg-danger text-white text-center p-3">
+    Flight Page
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2 class="text-center">Flight Form</h2>
+            <form (ngSubmit)="submitForm(flightForm)" #flightForm="ngForm">
+                <div class = "form-group">
+                    <label for="tktNumber">Ticket Number</label>
+                    <input type = "text" class = "form-control" name="tktNumber" [(ngModel)] ="flight!.tktNumber" />
+                </div>
+                <div class="form-group">
+                    <label for="origin">Origin</label>
+                    <input type="text" [(ngModel)]="flight!.origin" class="form-control" name = "origin">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" [(ngModel)]="flight!.destination" class="form-control" name = "destination">
+                </div>
+                <div class="form-group">
+                    <label for="passengerName">Passenger Name</label>
+                    <input type="text" [(ngModel)]="flight!.passengerName" class="form-control" name = "passengerName">
+                </div>
+                <div>
+                    <input type="submit" [value]="isUpdating? 'Update': 'Add Record'" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+        <div class="col-8">
+            <h2 class="text-center">Product List</h2>
+            <table class='table table-striped table-bordered'>
+                <thead>
+                    <tr>
+                        <th>Ticket Number</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Passenger Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of flightColl; let i=index">
+                        <td>{{p.tktNumber}}</td>
+                        <td>{{p.origin}}</td>
+                        <td>{{p.destination}}</td>
+                        <td>{{p.passengerName}}</td>
+
+                        <td>
+                            <button class="btn btn-primary btn-sm mr-1" (click)="findFlightById(p.tktNumber!)">
+                                Edit</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm mr-1" (click)="deleteFlight(p.tktNumber!)">
+                                Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

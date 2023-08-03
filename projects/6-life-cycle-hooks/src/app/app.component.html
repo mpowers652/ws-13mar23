@@ -1,0 +1,30 @@
+<h1>This is app component</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="">Enter message</label>
+        <input type="text" class = "form-control" #inp1>
+      </div>
+      <div>
+        <button class="btn btn-primary" (click)="changeMsg(inp1.value) ">
+          Click me
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <app-hello [msg]="message" *ngIf = "flag">
+        <h2> Hello world from parent</h2>
+      </app-hello>
+      <app-hello [msg]="message" *ngIf = "flag">
+        <h2> Hello world from parent</h2>
+      </app-hello>
+      <button (click)="remove()">Remove Hello Component</button>
+    </div>
+  </div>
+</div>

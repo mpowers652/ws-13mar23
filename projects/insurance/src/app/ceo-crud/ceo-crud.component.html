@@ -1,0 +1,68 @@
+<div>
+    <div class="col-8">
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch Manager Name</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Branch Agents</th>
+                    <th>Commission Percent</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let b of ceo.branches">
+                    <td>{{b.firstName + ' ' + b.lastName}}</td>
+                    <td>{{b.username}}</td>
+                    <td>{{b.password}}</td>
+                    <td *ngFor="let a of b.branchAgents!">
+                        <app-agentReport [agent] = a></app-agentReport>
+                    </td>
+                    <td>{{b.commissionPrcnt}}</td>
+                    <td>{{b.city}}</td>
+                    <td>
+                        <button type="submit" (click)="findBranch(b.userId)" class="btn btn-primary">Update
+                            Branch</button>
+                    </td>
+                    <td>
+                        <button type="submit" (click)="deleteBranch(b.userId)" class="btn btn-danger">
+                        Delete Branch</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <h2 class="text-center">Branch Form</h2>
+        <form (ngSubmit)="submitForm(branchForm)" #branchForm="ngForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" name = "firstName" [(ngModel)]="branch!.firstName!">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" [(ngModel)]="branch!.lastName" class="form-control" name = "lastName">
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" [(ngModel)]="branch!.username" class="form-control" name = "username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" [(ngModel)]="branch!.password" class="form-control" name = "password">
+            </div>
+            <div class="form-group">
+                <label for="commission">Commission</label>
+                <input type="text" [(ngModel)]="branch!.commissionPrcnt" class="form-control" name = "commission">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" [(ngModel)]="branch!.city" class="form-control" name = "city">
+            </div>
+            <div>
+                <input type="submit" [value]="isUpdating? 'Update': 'Add Record'" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</div>

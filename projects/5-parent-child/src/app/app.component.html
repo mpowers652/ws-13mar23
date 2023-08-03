@@ -1,0 +1,14 @@
+<h1>This is app.component.html</h1>
+<input type="text" #inp1>
+<br>
+<input type="text" #inp2>
+
+<br><br>
+<button class = "btn btn-warning" (click)="loadTextIntoMessage1and2(inp1.value,inp2.value)">
+  Load Text
+</button>
+<br><br>
+<h2>Now adding first component</h2>
+<app-first [msg1]="message1" msg2 = {{message2}}>
+  <p>This paragraph is inserted into ng-content place of first.component.html</p>
+</app-first>

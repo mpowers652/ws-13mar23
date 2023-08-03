@@ -1,0 +1,10 @@
+<h1 class = "bg-success p-2 text-white text-center">
+  Services Demo
+</h1>
+<label for="">Person Name</label>
+<input type="text" [(ngModel)]="personname">
+<button class = "btn btn-primary" (click)="greet()">Greet</button>
+
+<div *ngIf="greetMsg.length > 0" class="bg-primary text-white p-2">
+  {{greetMsg}}
+</div>

@@ -1,0 +1,117 @@
+<div>
+    <div class = "col-8">
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent Name</th>
+                    <th>Agent Commission</th>
+                    <th>Customer List</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let a for agentList">
+                <tr>
+                    <td>{{a.firstName + ' ' + a.lastName}}</td>
+                    <td>
+                        <button [value]="a!.commission"
+                        (click)="calculateCommission(a!.userId)">
+                        Placeholder Text
+                        </button>
+                    </td>
+                    <td *ngFor="let c of a.getCustList()">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th>Premiums Due</th>
+                                    <th>Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{c.firstName + ' ' + c.lastName}}</td>
+                                    <td>{{c.getRemainingPayment()}}</td>
+                                    <td>{{c.getDueDate()}}</td>
+                                    <td>
+                                        <button (click)="findCustomer(c!.getId())" class="btn btn-primary">Update</button>
+                                    </td>
+                                    <td>
+                                        <button (click)="deleteCustomer(c!.getId())" class="btn btn-danger">Delete</button>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <button type="submit" (click)="findAgent(a.userId)" class="btn btn-primary">Update
+                            Agent</button>
+                    </td>
+                    <td>
+                        <button type="submit" (click)="deleteAgent(a.userId)" class="btn btn-danger">
+                        Delete Agent</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" *ngIf="isAgent()">
+        <div class="col-4">
+            <h2 class="text-center">Agent Form</h2>
+            <form (ngSubmit)="submitForm(agentForm)" #agentForm="ngForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name = "firstName" [(ngModel)]="agent!.firstName!">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" [(ngModel)]="agent!.lastName" class="form-control" name = "lastName">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" [(ngModel)]="agent!.username" class="form-control" name = "username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" [(ngModel)]="agent!.password" class="form-control" name = "password">
+                </div>
+                <div class="form-group">
+                    <label for="commission">Commission</label>
+                    <input type="text" [(ngModel)]="agent!.commission" class="form-control" name = "commission">
+                </div>
+                <div>
+                    <input type="submit" [value]="isUpdating? 'Update': 'Add Record'" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" *ngIf="isNotAgent()">
+        <div class="col-4">
+            <h2 class="text-center">Customer Form</h2>
+            <form (ngSubmit)="submitForm(custForm)" #custForm="ngForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" name = "firstName" [(ngModel)]="customer!.firstName!">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" [(ngModel)]="customer!.lastName" class="form-control" name = "lastName">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" [(ngModel)]="customer!.username" class="form-control" name = "username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" [(ngModel)]="customer!.password" class="form-control" name = "password">
+                </div>
+                <div class="form-group">
+                    <label for="premiums">Premium Cost</label>
+                    <input type="text" [(ngModel)]="customer!.premiumCost" class="form-control" name = "premiums">
+                </div>
+                <div>
+                    <input type="submit" [value]="isUpdating? 'Update': 'Add Record'" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

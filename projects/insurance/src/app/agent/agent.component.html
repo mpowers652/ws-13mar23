@@ -1,0 +1,25 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>Premiums Due</th>
+                <th>Payment Value?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of custList">
+                <td>{{c.getId()}}</td>
+                <td>{{c.getRemainingPayment()}}</td>
+                <td>
+                    <input type="text"  #payment [value]="paymentVal">
+                </td>
+                <td>
+                    <button type="submit" (click)="makePayment(c.getId(), paymentVal.valueOf())" class="btn btn-success">
+                        Make Payment
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

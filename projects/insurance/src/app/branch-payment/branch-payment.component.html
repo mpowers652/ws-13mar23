@@ -1,0 +1,31 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Premium Due Date</th>
+                <th>Monthly Premium</th>
+                <th>Remaining Payment</th>
+                <th>Payment Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of custList">
+                <td>{{c.firstName + ' ' + c.lastName}}</td>
+                <td>{{c.dueDate}}</td>
+                <td>{{c.premiumCost}}</td>
+                <td>{{c.remainingPayment}}</td>
+                <td>
+                    <input type="text" [(ngModel)]="paymentVal" 
+                    placeholder="payment value here">
+                </td>
+                <td>
+                    <button class="btn btn-success m-4 p-2"
+                    (click)="makePayment(c!.getId()!)">
+                        Make Payment
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

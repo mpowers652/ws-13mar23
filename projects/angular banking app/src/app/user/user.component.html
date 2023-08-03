@@ -1,0 +1,25 @@
+<!-- <div class="container mt-5">
+    <div class="card text-center" style="padding: 20px; color: red;">
+        <h1>You are User</h1>
+        <h1>User Message = {{message}}</h1>
+        <button class="btn btn-sm btn-info" (click)="userApi()">Call /Greet From Server</button>
+    </div>
+</div>
+ -->      <h1 class="text-center m-3">CUSTOMER AREA</h1>
+ <div>
+    <p>Testing customer id = {{customerId}}</p>
+ </div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <ul>
+                <li><a [routerLink]="['viewaccountprofile',customerId]">VIEW ACCOUNT PROFILE</a></li>
+                <li><a [routerLink]="['viewoffers']">VIEW OFFERS</a></li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+

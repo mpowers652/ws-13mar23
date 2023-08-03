@@ -1,0 +1,63 @@
+<h1 class="text-white text-center bg-success">
+    BANK ACCOUNT SCREEN
+</h1>
+<!-- private int actNumber;
+private String actType;
+private int actBalance;
+private Date actCreationDate;
+
+
+private int customerId;
+private String firstname;
+private String lastname;
+private String city;
+private long phone;
+ -->
+
+
+    <div class="container bg-secondary justify-content-center">
+        <div class="row">
+            <div class="col">
+                <h2>ADD NEW BANK ACCOUNT</h2>
+                <form #bankAccountForm="ngForm" (ngSubmit)="save(bankAccountForm)" novalidate>
+
+                    <div class="form-group">
+                        <label for="" class="form-label">First Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="bankAccount!.customer!.firstname" name="firstname">
+                    </div>
+            <div class="form-group">
+                <label for="" class="form-label">Last Name</label>
+                <input type="text" class="form-control" [(ngModel)]="bankAccount!.customer!.lastname" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">City</label>
+                <input type="text" class="form-control" [(ngModel)]="bankAccount!.customer!.city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">Phone</label>
+                <input type="tel" class="form-control" [(ngModel)]="bankAccount!.customer!.phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">Account Type</label>
+                <select name="actType" id="" [(ngModel)]="bankAccount!.actType">
+                    <option value="">--SELECT ACT TYPE--</option>
+                    <option value="SAVINGS">SAVINGS</option>
+                    <option value="CURRENT">CURRENT</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">Act Balance</label>
+                <input type="tel" class="form-control" [(ngModel)]="bankAccount!.actBalance" name="actBalance">
+            </div>
+            <!-- <div class="form-group">
+                <label for="" class="form-label">Date</label>
+                <input type="date" class="form-control" [(ngModel)]="bankAccount!.actCreationDate" name="actBalance">
+            </div> -->
+
+            <br>
+            <input type="submit" class="btn btn-primary text-white" value="CREATE ACCOUNT">
+            <input type="reset" class="btn btn-primary text-white" value="reset">
+            </form>
+        </div>
+    </div>
+</div>

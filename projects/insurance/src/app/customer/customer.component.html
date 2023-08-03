@@ -1,0 +1,15 @@
+<div>
+    <input type="text" [(ngModel)] = "payment">
+    <button 
+        type="submit" 
+        onclick="makePayment(this.payment)"
+        class="btn btn-lg btn-success m-4 p-4">
+        Make Payment
+    </button>
+    <button 
+        type="submit" 
+        onclick="runReport()"
+        class="btn btn-lg btn-primary m-4 p-4">
+        Get Account Details
+    </button>
+</div>

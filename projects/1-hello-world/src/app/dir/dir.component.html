@@ -1,0 +1,32 @@
+<h1 class = "bg-success p-2 text-error text-center">
+    NgIf and NgFor Demo
+</h1>
+<div *ngIf="isLoggedIn">
+    Welcome user  You are currently logged in
+    Click here to log out 
+    <button class="btn btn-primary text-white"> 
+        Logout 
+    </button>
+</div>
+<div *ngIf = "!isLoggedIn">
+    Welcome guest you are not currently logged in
+    Click here to log in 
+    <button class="btn btn-primary text-white">
+        login
+    </button>
+</div>
+<h2>
+    Product List here
+</h2>
+<div *ngFor= "let p of productNames; let o = odd; let e = even; let i = index">
+    <h3 [class.bg-info] = "o" [class.bg-success] = "e">
+        S1.No = {{i+1}} Product name = {{p}}
+    </h3>
+    
+</div>
+
+<div *ngFor = "let p of productNames">
+    <h5 [class.bg-warning] = "p.length > 4">
+        Product name = {{p}}
+    </h5>
+</div>

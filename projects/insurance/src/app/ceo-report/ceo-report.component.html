@@ -1,0 +1,16 @@
+<div>
+    <table class='table table-striped table-bordered'>
+        <thead>
+            <tr>
+                <th>Combined Report</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td *ngFor="let b of ceo.branches!">
+                    <app-branchReport [branchMan] = b></app-branchReport>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

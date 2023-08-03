@@ -1,0 +1,21 @@
+<div>
+    <table class='table table-striped table-bordered'>
+        <thead>
+            <tr>
+                <th>Agent Id</th>
+                <th>Commission</th>
+                <th>Customer Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{agent!.userId}}</td>
+                <td>{{agent!.commission}}</td>
+                <td *ngFor="let c of custList">
+                    <!--creates a sub-table for each element c-->
+                    <app-custReport [customer] = c></app-custReport> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

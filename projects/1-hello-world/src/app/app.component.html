@@ -1,0 +1,37 @@
+<h1 class = "bg-primary text-center text-white p-2">My First Angular Application</h1>
+
+<h2>My app title is {{title}}</h2>
+
+<h2 class = "bg-primary text-white">The product details are</h2>
+<ul>
+    <li>product Id = {{prodid}}</li>
+    <li>Product Name = {{prodName}}</li>
+    <li>Product Price = {{price}}</li> 
+    <li class="bg-danger text-white">Price for 10 = {{getPriceFor10()}}</li>         
+    <li class="bg-info text-white">Product name in Upper case = {{getUpperCaseName()}}</li>     
+</ul>
+<app-dir class = "text-center"></app-dir>
+<input type = "text" [value] = "prodName"/><br>
+
+<input type = "submit" [value] = "submitString" [formMethod]= "formMethod" [formAction]= "submitAction"/>
+<br><br>
+<h1 class = "class-1 class-2">This is another heading</h1>
+<!--<h1 [class] = "class1"> One More heading</h1>
+<h1 [class.bg-warning] = "price>100"></h1> -->
+<h1>The following output is for [ngClass] = getClassObject()</h1>
+<div [ngClass] = "getClassObject()">
+    <h3> Product name is {{prodName}} and price is {{price}}</h3>
+</div>
+<br><br>
+<div [style.fontSize.px] = "fontSizeNoUnits">
+    Hello World Font Size No Units
+</div>
+
+<div [style.fontSize] = "fontSizeUnits">
+    Hello World Font Size Units
+</div>
+
+<div [ngStyle] = "getStyleObject()">
+    Hello World with [ngStyle]
+</div>
+<button (click) = "saveProduct($event)">Click me</button>
