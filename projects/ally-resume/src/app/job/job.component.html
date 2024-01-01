@@ -1,1 +1,12 @@
-<p>job works!</p>
+<!--processes the company, title and summary passed through from title-->
+<h3>{{company}}</h3>
+<h4>{{title}}</h4>
+<p>{{summary}}</p>
+<br>
+<!--processes each of the major duties into a bulleted list-->
+<ul >
+    <li *ngFor="let d of duties"></li>
+</ul>
+<br>
+<!--when the location url and contact name are passed properly, displays them here-->
+<p>Contact them <a href={{locUrl}}>here</a> and contact {{contact}}</p>

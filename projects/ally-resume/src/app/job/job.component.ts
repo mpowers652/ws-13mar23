@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-job',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./job.component.css']
 })
 export class JobComponent {
+  @Input() title:string = '';
+  @Input() duties:string[] = [];
+  @Input() summary:string = '';
+  @Input() jobId:string = '';
+  @Input() company:string = '';
+  @Input() locUrl:string = '';
+  @Input() contact:string = '';
   
 }
