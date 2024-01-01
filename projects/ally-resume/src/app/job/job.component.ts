@@ -13,5 +13,6 @@ export class JobComponent {
   @Input() company:string = '';
   @Input() locUrl:string = '';
   @Input() contact:string = '';
-  
+  @Input() startDate:Date = new Date();
+  @Input() endDate:Date = new Date();
 }

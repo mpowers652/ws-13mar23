@@ -4,9 +4,9 @@
 <p>{{summary}}</p>
 <br>
 <!--processes each of the major duties into a bulleted list-->
-<ul >
-    <li *ngFor="let d of duties"></li>
+<ul *ngFor="let d of duties">
+    <li>{{d}}</li>
 </ul>
 <br>
 <!--when the location url and contact name are passed properly, displays them here-->
-<p>Contact them <a href={{locUrl}}>here</a> and contact {{contact}}</p>
+<p>Contact {{contact}} at <a href={{locUrl}}>this website</a></p>
