@@ -922,6 +922,99 @@
           }
         }
       }
+    },
+    "ally-resume": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/ally-resume",
+      "sourceRoot": "projects/ally-resume/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ally-resume",
+            "index": "projects/ally-resume/src/index.html",
+            "main": "projects/ally-resume/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/ally-resume/tsconfig.app.json",
+            "assets": [
+              "projects/ally-resume/src/favicon.ico",
+              "projects/ally-resume/src/assets"
+            ],
+            "styles": [
+              "projects/ally-resume/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "ally-resume:build:production"
+            },
+            "development": {
+              "browserTarget": "ally-resume:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ally-resume:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/ally-resume/tsconfig.spec.json",
+            "assets": [
+              "projects/ally-resume/src/favicon.ico",
+              "projects/ally-resume/src/assets"
+            ],
+            "styles": [
+              "projects/ally-resume/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "cli": {
