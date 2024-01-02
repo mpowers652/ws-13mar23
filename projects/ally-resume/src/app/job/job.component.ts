@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-job',
   templateUrl: './job.component.html',
   styleUrls: ['./job.component.css']
 })
-export class JobComponent {
+export class JobComponent implements OnInit{
   @Input() title:string = '';
   @Input() duties:string[] = [];
   @Input() summary:string = '';
@@ -15,4 +15,14 @@ export class JobComponent {
   @Input() contact:string = '';
   @Input() startDate:Date = new Date();
   @Input() endDate:Date = new Date();
+
+  @Output() outDuties = new EventEmitter<string[]>();
+  
+  ngOnInit(): void {
+    this.addNewItem("stuff");
+  }
+
+  addNewItem(value: string) {
+    this.outDuties.emit(this.duties);
+  }
 }

@@ -1,0 +1,11 @@
+<h4>{{skills}}</h4>
+
+<ul *ngFor="let d of majorDuties">
+    <li>{{d}}</li>
+</ul>
+<br>
+<p>{{summary}}</p>
+<ng-content (outDuties) = "addToDuties()"></ng-content>
+<ul *ngFor="let j of dutieList">
+    <li>{{j}}</li>
+</ul>

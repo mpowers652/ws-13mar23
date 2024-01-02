@@ -1,8 +1,20 @@
 <app-profile></app-profile>
-<app-summary1></app-summary1>
+<app-summary 
+    summary = "These are the jobs related to what I'm applying for" 
+    skills = "This is the first professional summary of skills and abilities pertinent to this job hunt"
+    (outDuties) = "addToDuties($event)"
+    >
+    <app-job 
+        title = "Dishwasher" 
+        [duties] = "['wash dishes','clean']"
+        >
+    </app-job>
+</app-summary>
 <!-- The jobs should be added to the summary but it's good to add it here as a backup
-<app-job title='Dishwasher' [duties] = "['wash dishes','clean']"></app-job>
+
 <app-job></app-job>
 -->
-<app-summary1></app-summary1>
+<app-summary summary="These are the other jobs I've worked professionally">
+
+</app-summary>
 <router-outlet></router-outlet>
