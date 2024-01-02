@@ -16,9 +16,5 @@ import { Component } from '@angular/core';
 `,
 })
 export class AppComponent {
-addToDuties($event: Event) {
-throw new Error('Method not implemented.');
-}
   title = 'ally-resume';
-  
 }

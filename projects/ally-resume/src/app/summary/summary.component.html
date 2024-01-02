@@ -1,11 +1,30 @@
 <h4>{{skills}}</h4>
-
 <ul *ngFor="let d of majorDuties">
     <li>{{d}}</li>
 </ul>
+<app-job 
+        company="Nordy's"
+        title = "Dishwasher" 
+        [duties] = "['wash dishes','clean']"
+        >
+</app-job>
+<app-job 
+        company="Nordy's"
+        title = "Dishwasher" 
+        [duties] = "['wash dishes','clean']"
+        >
+</app-job>
+<!--
+<ng-content 
+></ng-content>
+-->
+
 <br>
+
 <p>{{summary}}</p>
-<ng-content (outDuties) = "addToDuties()"></ng-content>
+
+<!--
 <ul *ngFor="let j of dutieList">
     <li>{{j}}</li>
 </ul>
+-->

@@ -5,7 +5,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   templateUrl: './job.component.html',
   styleUrls: ['./job.component.css']
 })
-export class JobComponent implements OnInit{
+export class JobComponent /*implements OnInit*/{
   @Input() title:string = '';
   @Input() duties:string[] = [];
   @Input() summary:string = '';
@@ -16,13 +16,14 @@ export class JobComponent implements OnInit{
   @Input() startDate:Date = new Date();
   @Input() endDate:Date = new Date();
 
-  @Output() outDuties = new EventEmitter<string[]>();
-  
+  //@Output() outDuties = new EventEmitter<string[]>();
+  /*
   ngOnInit(): void {
-    this.addNewItem("stuff");
+    this.addNewItem(this.duties);
   }
-
-  addNewItem(value: string) {
-    this.outDuties.emit(this.duties);
+  
+  addNewItem(value: string[]) {
+    this.outDuties.emit(value);
   }
+  */
 }

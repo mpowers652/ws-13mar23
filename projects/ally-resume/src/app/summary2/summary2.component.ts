@@ -2,11 +2,11 @@ import { Component, OnInit, Input, ViewChildren, QueryList, AfterViewInit } from
 import { JobComponent } from '../job/job.component';
 
 @Component({
-  selector: 'app-summary',
-  templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.css']
+  selector: 'app-summary2',
+  templateUrl: './summary2.component.html',
+  styleUrls: ['./summary2.component.css']
 })
-export class SummaryComponent implements /*OnInit,*/ AfterViewInit{
+export class Summary2Component implements /*OnInit,*/ AfterViewInit{
  
   @Input() summary:string = '';
   @Input() skills:string = '';
@@ -27,21 +27,4 @@ export class SummaryComponent implements /*OnInit,*/ AfterViewInit{
       }
     });
   } 
-  /*
-  addToDuties():void {
-    for(let index = 0; index < this.dutieList.length; index++) {
-      const duty = this.dutieList[index];
-      this.majorDuties.add(duty)
-    }
-    this.dutieList = [];
-  }
-
-  addToDuties():void {
-    for (let index = 0; index < this.jobList.length; index++) {
-      const element = this.jobList[index];
-      const duties = element.duties;
-      duties.forEach(this.majorDuties.add);
-    }
-  }
-  */
 }
