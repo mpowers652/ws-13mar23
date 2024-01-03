@@ -9,12 +9,23 @@ export class JobComponent /*implements OnInit*/{
   @Input() title:string = '';
   @Input() duties:string[] = [];
   @Input() summary:string = '';
-  @Input() jobId:string = '';
   @Input() company:string = '';
   @Input() locUrl:string = '';
   @Input() contact:string = '';
-  @Input() startDate:Date = new Date();
-  @Input() endDate:Date = new Date();
+
+  dateOptions: any = {year: 'numeric', month: '2-digit'}
+  receivedStartDate: Date = new Date();
+  receivedEndDate: Date = new Date();
+
+  @Input() set startDate(value: string) {
+    // Parse the string value to a Date object
+    this.receivedStartDate = new Date(value);
+  }
+  
+  @Input() set endDate(value: string) {
+    // Parse the string value to a Date object
+    this.receivedEndDate = new Date(value);
+  }
 
   //@Output() outDuties = new EventEmitter<string[]>();
   /*

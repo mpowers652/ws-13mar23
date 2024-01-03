@@ -1,6 +1,8 @@
 <!--processes the company, title and summary passed through from title-->
-<h4 ng-mousemove = "outDuties(this.)">{{company}}</h4>
 <h5>{{title}}</h5>
+<p>
+    {{receivedStartDate.toLocaleDateString('en-US', dateOptions)}} to {{receivedEndDate.toLocaleDateString('en-US', dateOptions)}}
+</p>
 <p>{{summary}}</p>
 <br>
 <!--processes each of the major duties into a bulleted list-->
