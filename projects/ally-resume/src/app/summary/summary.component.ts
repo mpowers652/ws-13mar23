@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { Component, Input, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { JobComponent } from '../job/job.component';
 import { JobColl } from '../job-coll';
 import { Job } from '../job';
@@ -16,6 +16,7 @@ export class SummaryComponent implements AfterViewInit{
   @ViewChildren(JobComponent) jobList?: QueryList<JobComponent>;
   
   majorDuties:Set<string> = new Set();
+  jobs:Job[] = new JobColl().jobList
   
   ngAfterViewInit(): void {
     this.jobList?.forEach(job=>{
