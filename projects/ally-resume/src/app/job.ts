@@ -1,13 +1,15 @@
 export class Job {
-    title:string = '';
-    company:string = '';
-    summary:string = '';
-    duties:string[] = [];
-    locUrl:string = '';
-    startDate:string = '';
-    endDate:string = '';
-    contact:string = '';
-
+    constructor(
+    public title:string,
+    public company:string,
+    public summary:string,
+    public duties:string[],
+    public locUrl:string,
+    public startDate:string,
+    public endDate:string,
+    public contact:string
+    ){}
+/*
     constructor(
         jobTitle:string, jobComp:string, jobSumm:string,
         jobDuties:string[], jobUrl:string, jobStart:string,
@@ -22,4 +24,5 @@ export class Job {
         this.endDate = jobEnd;
         this.contact = jobContact;
     }
+    */
 }
