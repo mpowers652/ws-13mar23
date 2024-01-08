@@ -2,34 +2,167 @@
 <ul *ngFor="let d of majorDuties">
     <li>{{d}}</li>
 </ul>
+<p>{{summary}}</p>
 <app-job 
-    company="Nordy's"
-    title = "Dishwasher" 
-    summary="At Nordy's I would be required to work with the cooks and the bussers 
-        to ensure efficient use of water and my time"
-    [duties] = "['wash dishes','clean']"
-    locUrl="http://www.nordysbbq.com/"
-    startDate = "2021-12"
-    endDate = "2022-06"
+    title = "Kitchen Team Member" 
+    company="2 Bar Bowl"
+    summary="I would do a couple things including cook meals for customers and prepare ingredients for the other cooks"
+    [duties] = "['line cook','food prep', 'coordinate with others']"
+    locUrl="https://www.2barbowl.com/"
+    startDate = "2023-10-10"
+    endDate = "2023-12-10"
+    contact = "Paul"
+></app-job>
+<app-job 
+    title = "Sales Associate" 
+    company="Spirit Halloween"
+    summary="I would guide customers to what would make their costumes or decorations work better.
+        I would also cash out customers on Spirit's POS systems. In addition, I would stock any materials 
+        or inventory that arrived"
+    [duties] = "['sales','stock inventory', 'cash register', 'customer service', 'coordinate with others']"
+    locUrl="https://www.spirithalloween.com/"
+    startDate = "2023-08-10"
+    endDate = "2023-11-10"
+    contact = "Crista"
+></app-job>
+<app-job 
+    title = "Cashier/Sales Associate" 
+    company="Go! Calendar Games and Toys"
+    summary="When I worked here, I would not only help customers find what they're looking for, but I would try to add on
+        to their total however I could. After they were done, I would ring them up on the company designed registers"
+    [duties] = "['sales','stock inventory', 'cash register', 'customer service', 'coordinate with others']"
+    locUrl="https://goretailgroup.com/"
+    startDate = "2023-02-10"
+    endDate = "2023-08-10"
+    contact = "Carla"
+></app-job>
+<!--
+<app-job 
+    title = "Easter Bunny" 
+    company="VIP Holiday Photo"
+    summary="As the Easter Bunny, not only would I pose with anybody who wanted a photo 
+    but I would also take photos of the other people working as the bunny"
+    [duties] = "['pose model','adjust scenery', 'coordinate with others']"
+    locUrl="https://www.vipholidayphotos.com/"
+    startDate = "2023-02-10"
+    endDate = "2023-04-10"
+    contact = "Andrea"
+></app-job>
+-->
+<app-job 
+    title = "Driver Helper" 
+    company="UPS"
+    summary="When working for UPS, I would work with the drivers to get the packages ready for them. 
+        By doing this, the routes could be completed much quicker."
+    [duties] = "['detail-orientation','agile', 'coordinate with others']"
+    locUrl="https://ups.com/"
+    startDate = "2022-11-10"
+    endDate = "2023-1-10"
+    contact = "Ashley or James"
 >
 </app-job>
 <app-job 
-        company="Nordy's"
-        title = "Dishwasher" 
-        [duties] = "['wash dishes','clean']"
-        >
+    title = "Cashier and Customer Service" 
+    company="Albertsons"
+    summary="When I was working for Albertsons, I would take customer concerns
+        and process them the best I could. If I was unable to adress them, I would pass
+        them up to my superiors"
+    [duties] = "['customer service','cash register', 'coordinate with others']"
+    locUrl="https://www.albertsons.com/"
+    startDate = "2022-10-10"
+    endDate = "2023-02-10"
+    contact = "Chris"
+></app-job>
+<app-job 
+    title = "Bakery Associate" 
+    company="Albertsons"
+    summary="In this role, I would primarily package what others would bake. 
+        I would also proof the baked goods to prepare them for baking"
+    [duties] = "['customer service','proof baked goods', 'coordinate with others', 'package baked goods']"
+    locUrl="https://www.albertsons.com/"
+    startDate = "2022-8-10"
+    endDate = "2022-10-10"
+    contact = "Chris"
+>
 </app-job>
-<!--
-<ng-content 
-></ng-content>
--->
-
-<br>
-
-<p>{{summary}}</p>
-
-<!--
-<ul *ngFor="let j of dutieList">
-    <li>{{j}}</li>
-</ul>
--->
+<app-job 
+    title = "Cashier/Customer Service" 
+    company="Soma"
+    summary="While working for Soma, I worked with customers to ensure they got what they requested and tried to upsell.
+        I would take their measurements if getting undergarments and alert them of any sales that the store might be having.
+        I would also try to sell the on the idea of a gift card for friends and family."
+    [duties] = "['detail-orientation','communication', 'sales', 'customer service', 'coordinate with others']"
+    locUrl="https://www.soma.com"
+    startDate = "2022-11-10"
+    endDate = "2023-1-10"
+    contact = "Ashley or James"
+>
+</app-job>
+<app-job 
+    title = "Prep Cook/Dishwasher" 
+    company="Nordy's"
+    summary="At Nordy's I would be required to work with the cooks and the bussers 
+        to ensure efficient use of water and my time"
+    [duties] = "['wash dishes','clean', 'food prep', 'cook']"
+    locUrl="http://www.nordysbbq.com/"
+    startDate = "2021-12-15"
+    endDate = "2022-06-10"
+    contact = "Nordy"
+>
+</app-job>
+<app-job 
+    title = "Server/Busser" 
+    company="Giordano's"
+    summary="I would take customers' orders and bring them out. 
+        After they were done, I would also clean the tables of the dishes and deliver them to the dishwasher"
+    [duties] = "['take orders','clean', 'food service']"
+    locUrl="https://giordanos.com/"
+    startDate = "2021-09-10"
+    endDate = "2021-12-10"
+    contact = "My old boss"
+>
+</app-job>
+<app-job 
+    title = "Cashier/Customer Service" 
+    company="Love's Travel Center"
+    summary="I would check out customers."
+    [duties] = "['cash register','customer service']"
+    locUrl="https://www.loves.com/"
+    startDate = "2021-09-10"
+    endDate = "2021-11-10"
+    contact = "My old boss"
+>
+</app-job>
+<app-job 
+    title = "Cashier/Customer Service" 
+    company="Kum & Go"
+    summary="I would check out customers."
+    [duties] = "['cash register','customer service']"
+    locUrl="https://www.kumandgo.com/"
+    startDate = "2021-05-10"
+    endDate = "2021-09-10"
+    contact = "My old boss"
+>
+</app-job>
+<app-job 
+    title = "Crew Member" 
+    company="Taco Bell"
+    summary="I would check out customers and prepare food for them."
+    [duties] = "['cash register','customer service', 'food prep', 'fryers']"
+    locUrl="https://www.tacobell.com/"
+    startDate = "2021-03-10"
+    endDate = "2021-04-10"
+    contact = "My old boss"
+>
+</app-job>
+<app-job 
+    title = "Crew Member" 
+    company="Wendy's"
+    summary="I would check out customers and prepare food for them."
+    [duties] = "['cash register','customer service', 'food prep', 'fryers']"
+    locUrl="https://www.wendys.com/"
+    startDate = "2021-03-10"
+    endDate = "2021-04-10"
+    contact = "My old boss"
+>
+</app-job>
