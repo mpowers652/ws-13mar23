@@ -16,7 +16,6 @@ export class SummaryComponent implements AfterViewInit{
   @ViewChildren(JobComponent) jobList?: QueryList<JobComponent>;
   
   majorDuties:Set<string> = new Set();
-  jobs:Job[] = Job[JobColl.jobs]
   
   ngAfterViewInit(): void {
     this.jobList?.forEach(job=>{
