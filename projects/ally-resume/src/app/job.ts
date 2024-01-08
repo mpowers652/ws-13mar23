@@ -9,20 +9,4 @@ export class Job {
     public endDate:string,
     public contact:string
     ){}
-/*
-    constructor(
-        jobTitle:string, jobComp:string, jobSumm:string,
-        jobDuties:string[], jobUrl:string, jobStart:string,
-        jobEnd:string, jobContact:string
-    ){
-        this.title = jobTitle;
-        this.company = jobComp;
-        this.summary = jobSumm;
-        this.duties = jobDuties;
-        this.locUrl = jobUrl;
-        this.startDate = jobStart;
-        this.endDate = jobEnd;
-        this.contact = jobContact;
-    }
-    */
 }
