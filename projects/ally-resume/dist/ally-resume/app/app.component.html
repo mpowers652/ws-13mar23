@@ -1,0 +1,14 @@
+<!--The page shows the profile info first, the picture, contact info and so on-->
+<app-profile></app-profile>
+<!--Inside the summary html, we have each of the jobs worked with the text below as description-->
+<app-summary 
+    summary = "These are the jobs related to what I'm applying for" 
+    skills = "This is the first professional summary of skills and abilities pertinent to this job hunt"
+></app-summary>
+<!--Summary 2 is the same as Summary but due to inheritance/parent-child requirements, 
+    it needed a separate class-->
+<app-summary2 
+    summary="These are the other jobs I've worked professionally"
+    skills="These are some other skills I've used over the years"
+></app-summary2>
+<router-outlet></router-outlet>

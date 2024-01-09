@@ -1,0 +1,15 @@
+<!--processes the company, title and summary passed through from title-->
+<h4>{{company}}</h4>
+<h5>{{title}}</h5>
+<p>
+    {{receivedStartDate.toLocaleDateString('en-US', dateOptions)}} to {{receivedEndDate.toLocaleDateString('en-US', dateOptions)}}
+</p>
+<p>{{summary}}</p>
+<br>
+<!--processes each of the major duties into a bulleted list-->
+<ul *ngFor="let d of duties">
+    <li>{{d}}</li>
+</ul>
+<br>
+<!--when the location url and contact name are passed properly, displays them here-->
+<p>Contact {{contact}} at <a href={{locUrl}}>this website</a></p>

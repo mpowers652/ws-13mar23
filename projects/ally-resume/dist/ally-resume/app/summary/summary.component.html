@@ -1,0 +1,31 @@
+<h4>{{skills}}</h4>
+<ul *ngFor="let d of majorDuties">
+    <li>{{d}}</li>
+</ul>
+<p>{{summary}}</p>
+<section *ngFor="let j of jobs">
+    <app-job
+        title = {{j.title}}
+        company = {{j.company}}
+        summary = {{j.summary}}
+        [duties]="j.duties"
+        locUrl={{j.locUrl}}
+        startDate={{j.startDate}}
+        endDate={{j.endDate}}
+        contact={{j.contact}}
+    ></app-job>
+</section>
+
+<!--
+<app-job 
+    title = "Easter Bunny" 
+    company="VIP Holiday Photo"
+    summary="As the Easter Bunny, not only would I pose with anybody who wanted a photo 
+    but I would also take photos of the other people working as the bunny"
+    [duties] = "['pose model','adjust scenery', 'coordinate with others']"
+    locUrl="https://www.vipholidayphotos.com/"
+    startDate = "2023-02-10"
+    endDate = "2023-04-10"
+    contact = "Andrea"
+></app-job>
+-->
