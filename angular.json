@@ -941,6 +941,7 @@
             ],
             "tsConfig": "projects/ally-resume/tsconfig.app.json",
             "assets": [
+              "projects/ally-resume/src/app",
               "projects/ally-resume/src/favicon.ico",
               "projects/ally-resume/src/assets"
             ],
