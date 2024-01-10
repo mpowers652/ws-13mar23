@@ -1,0 +1,156 @@
+[debug] [2024-01-10T21:45:40.223Z] ----------------------------------------------------------------------
+[debug] [2024-01-10T21:45:40.276Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-10T21:45:40.305Z] CLI Version:   13.0.3
+[debug] [2024-01-10T21:45:40.317Z] Platform:      win32
+[debug] [2024-01-10T21:45:40.323Z] Node Version:  v18.16.0
+[debug] [2024-01-10T21:45:40.331Z] Time:          Wed Jan 10 2024 14:45:40 GMT-0700 (Mountain Standard Time)
+[debug] [2024-01-10T21:45:40.334Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-10T21:45:41.092Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-10T21:45:41.094Z] > authorizing via signed-in user (cartoonsredbob@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\carto\Desktop\ws-13mar23
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-10T21:45:48.280Z] Using project from CLI flag: ally-resume
+[debug] [2024-01-10T21:45:48.296Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:45:48.842Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:45:48.843Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[info] i  Using project ally-resume (Ally-Resume) 
+[info] 
+=== Hosting Setup
+[debug] [2024-01-10T21:45:48.873Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:45:49.065Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:45:49.066Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[debug] [2024-01-10T21:47:49.459Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:51:54)
+    at async C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:36:63
+    at async discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:46:32)
+    at async doSetup (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:88:31)
+    at async init (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-10T21:48:06.014Z] ----------------------------------------------------------------------
+[debug] [2024-01-10T21:48:06.032Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-10T21:48:06.035Z] CLI Version:   13.0.3
+[debug] [2024-01-10T21:48:06.037Z] Platform:      win32
+[debug] [2024-01-10T21:48:06.039Z] Node Version:  v18.16.0
+[debug] [2024-01-10T21:48:06.046Z] Time:          Wed Jan 10 2024 14:48:06 GMT-0700 (Mountain Standard Time)
+[debug] [2024-01-10T21:48:06.048Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-10T21:48:06.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-10T21:48:06.344Z] > authorizing via signed-in user (cartoonsredbob@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\carto\Desktop\ws-13mar23
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-10T21:48:12.729Z] Using project from CLI flag: ally-resume
+[debug] [2024-01-10T21:48:12.748Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:48:13.210Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:48:13.211Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[info] i  Using project ally-resume (Ally-Resume) 
+[info] 
+=== Hosting Setup
+[debug] [2024-01-10T21:48:13.239Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:48:13.380Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:48:13.380Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[debug] [2024-01-10T21:49:37.325Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:51:54)
+    at async C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:38:55
+    at async discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:46:32)
+    at async doSetup (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:54:11)
+    at async init (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-10T21:49:51.810Z] ----------------------------------------------------------------------
+[debug] [2024-01-10T21:49:51.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-10T21:49:51.819Z] CLI Version:   13.0.3
+[debug] [2024-01-10T21:49:51.820Z] Platform:      win32
+[debug] [2024-01-10T21:49:51.820Z] Node Version:  v18.16.0
+[debug] [2024-01-10T21:49:51.822Z] Time:          Wed Jan 10 2024 14:49:51 GMT-0700 (Mountain Standard Time)
+[debug] [2024-01-10T21:49:51.823Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-10T21:49:52.105Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-10T21:49:52.108Z] > authorizing via signed-in user (cartoonsredbob@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\carto\Desktop\ws-13mar23
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-10T21:49:58.304Z] Using project from CLI flag: ally-resume
+[debug] [2024-01-10T21:49:58.322Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:49:58.759Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:49:58.760Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[info] i  Using project ally-resume (Ally-Resume) 
+[info] 
+=== Hosting Setup
+[debug] [2024-01-10T21:49:58.791Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume [none]
+[debug] [2024-01-10T21:49:58.960Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume 200
+[debug] [2024-01-10T21:49:58.961Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ally-resume {"projectId":"ally-resume","projectNumber":"962800397084","displayName":"Ally-Resume","name":"projects/ally-resume","resources":{"hostingSite":"ally-resume"},"state":"ACTIVE","etag":"1_03feddde-7678-405f-874e-bb3ee78a6be0"}
+[debug] [2024-01-10T21:50:43.756Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:51:54)
+    at async C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\vite\index.js:36:63
+    at async discover (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:46:32)
+    at async doSetup (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:54:11)
+    at async init (C:\Users\carto\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
