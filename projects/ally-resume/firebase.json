@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ally-resume/app",
+    "source": "dist/ally-resume",
     "ignore": [
       "firebase.json",
       "**/.*",
